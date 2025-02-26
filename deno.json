@@ -11,5 +11,9 @@
 
     "~/": "./src/"
   },
+  "tasks": {
+    "clean": "rm -rf ./release",
+    "compile": "deno task clean && deno compile -A --target x86_64-pc-windows-msvc --icon ./assets/favicon.ico --output ./release/cq.exe main.ts"
+  },
   "version": "0.0.1"
 }
